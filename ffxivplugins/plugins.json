@@ -1,0 +1,27 @@
+[
+  {
+    "Author": "Briette",
+    "Name": "Custom Sounds",
+    "Punchline": "Custom Quest Themes | Revert to less high pitched sound effects",
+    "Description": "Choose your Quest Accept/Complete sounds.\n\nRevert to pre-patch 7.5 system sound effects for less high pitched vendor and item retrieval noises.\n\nMore to come!",
+    "Tags": [
+      "sound",
+      "sounds",
+      "replacer",
+      "quest"
+    ],
+    "InternalName": "CustomSounds",
+    "RepoUrl": "https://github.com/Maybriette/FFXIV_CustomSounds",
+    "LastUpdate": 1778191553,
+    "DownloadLinkInstall": "https://maybriette.github.io/install/latest.zip",
+    "DownloadLinkUpdate": "https://maybriette.github.io/update/latest.zip",
+    "AssemblyVersion": "1.0.0.0",
+    "ApplicableVersion": "any",
+    "DalamudApiLevel": "15",
+    "TestingAssemblyVersion": null,
+    "DownloadLinkTesting": "https://maybriette.github.io/install/testing.zip",
+    "IconUrl": "https://maybriette.github.io/media/customsounds.png",
+    "IsHide": false,
+    "IsTestingExclusive": false
+  }
+]
