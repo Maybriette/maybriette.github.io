@@ -15,7 +15,7 @@
     "LastUpdate": 1778191553,
     "DownloadLinkInstall": "https://maybriette.github.io/install/latest.zip",
     "DownloadLinkUpdate": "https://maybriette.github.io/update/latest.zip",
-    "AssemblyVersion": "1.0.0.0",
+    "AssemblyVersion": "1.0.0.1",
     "ApplicableVersion": "any",
     "DalamudApiLevel": "15",
     "TestingAssemblyVersion": null,
