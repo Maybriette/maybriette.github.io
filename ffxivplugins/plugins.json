@@ -2,8 +2,8 @@
   {
     "Author": "Briette",
     "Name": "Custom Sounds",
-    "Punchline": "Custom Quest Themes | Revert to less high pitched sound effects",
-    "Description": "Choose your Quest Accept/Complete sounds.\n\nRevert to pre-patch 7.5 system sound effects for less high pitched vendor and item retrieval noises.\n\nMore to come!",
+    "Punchline": "No, it's not your imagination. Patch 7.5 changed some sound effects to be annoyingly high pitched!\nRevert those changes plus setup other sounds like custom Quest Themes",
+    "Description": "Revert to pre-patch 7.5 system sound effects for less high pitched vendor and item retrieval noises.\n\nChoose your Quest Accept/Complete sounds.\n\nMore sound options to come! Suggestions are welcome. Contact info on repo page",
     "Tags": [
       "sound",
       "sounds",
@@ -20,7 +20,7 @@
     "DalamudApiLevel": "15",
     "TestingAssemblyVersion": null,
     "DownloadLinkTesting": "https://maybriette.github.io/install/testing.zip",
-    "IconUrl": "https://maybriette.github.io/media/customsounds.png",
+    "IconUrl": "https://i.postimg.cc/nrG9Dqsm/customsounds.png",
     "IsHide": false,
     "IsTestingExclusive": false
   }
