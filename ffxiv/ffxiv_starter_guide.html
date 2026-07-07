@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>FFXIV Starter Guide</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600&family=Source+Sans+3:wght@300;400;500;600&display=swap');
+
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    font-family: 'Source Sans 3', sans-serif;
+    font-weight: 400;
+    background: #0d0f14;
+    color: #d4cfc5;
+    min-height: 100vh;
+    padding: 2.5rem 1.5rem 4rem;
+  }
+
+  .page {
+    max-width: 720px;
+    margin: 0 auto;
+  }
+
+  header {
+    text-align: center;
+    margin-bottom: 3rem;
+    padding-bottom: 2rem;
+    border-bottom: 1px solid #2a2d38;
+  }
+
+  header .eyebrow {
+    font-family: 'Cinzel', serif;
+    font-size: 11px;
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+    color: #8b7d5a;
+    margin-bottom: 0.75rem;
+  }
+
+  header h1 {
+    font-family: 'Cinzel', serif;
+    font-size: 2rem;
+    font-weight: 600;
+    color: #e8dfc8;
+    line-height: 1.2;
+    margin-bottom: 0.75rem;
+  }
+
+  header p {
+    font-size: 15px;
+    color: #7a7670;
+    font-weight: 300;
+  }
+
+  .step {
+    margin-bottom: 2.25rem;
+    padding-bottom: 2.25rem;
+    border-bottom: 1px solid #1e2028;
+  }
+
+  .step:last-child {
+    border-bottom: none;
+    margin-bottom: 0;
+  }
+
+  .step-header {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    margin-bottom: 1rem;
+  }
+
+  .step-number {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    border: 1px solid #3a3520;
+    background: #1a1a14;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Cinzel', serif;
+    font-size: 13px;
+    color: #8b7d5a;
+    flex-shrink: 0;
+  }
+
+  .step-title {
+    font-family: 'Cinzel', serif;
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #e8dfc8;
+  }
+
+  .step-body {
+    padding-left: 46px;
+  }
+
+  .step-body p {
+    font-size: 15px;
+    line-height: 1.7;
+    color: #9a958c;
+    margin-bottom: 0.85rem;
+  }
+
+  .step-body p:last-child {
+    margin-bottom: 0;
+  }
+
+  .step-body strong {
+    color: #c8bfa8;
+    font-weight: 500;
+  }
+
+  .step-body em {
+    color: #b0a890;
+    font-style: italic;
+  }
+
+  a {
+    color: #8b9fbe;
+    text-decoration: none;
+    font-size: 14px;
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+  }
+
+  a:hover { color: #a8bcdb; text-decoration: underline; }
+
+  .link-row {
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+    margin-top: 0.75rem;
+  }
+
+  .link-row a {
+    display: inline-block;
+  }
+
+  /* Server cards */
+  .server-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+    margin: 1rem 0;
+  }
+
+  .server-card {
+    background: #14161c;
+    border: 1px solid #2a2d38;
+    border-radius: 10px;
+    padding: 16px 18px;
+  }
+
+  .server-card .label {
+    font-size: 11px;
+    font-family: 'Cinzel', serif;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: #5a5440;
+    margin-bottom: 6px;
+  }
+
+  .server-card .name {
+    font-size: 16px;
+    font-weight: 500;
+    color: #d4c89a;
+    margin-bottom: 8px;
+  }
+
+  .server-card .desc {
+    font-size: 13px;
+    color: #6b6760;
+    line-height: 1.6;
+    margin: 0;
+  }
+
+  /* Warning box */
+  .warning-box {
+    background: #191408;
+    border: 1px solid #3d2e00;
+    border-left: 3px solid #8b6a00;
+    border-radius: 8px;
+    padding: 13px 15px;
+    margin: 1rem 0;
+  }
+
+  .warning-box .warning-label {
+    font-size: 11px;
+    font-family: 'Cinzel', serif;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: #8b6a00;
+    margin-bottom: 6px;
+  }
+
+  .warning-box p {
+    font-size: 14px !important;
+    color: #9a8860 !important;
+    line-height: 1.65;
+    margin: 0 !important;
+  }
+
+  /* Code box */
+  .code-box {
+    background: #0a0b0f;
+    border: 1px solid #2a2d38;
+    border-radius: 8px;
+    padding: 14px 18px;
+    display: inline-flex;
+    align-items: baseline;
+    gap: 14px;
+    margin: 0.75rem 0;
+  }
+
+  .code-box .code {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 22px;
+    font-weight: 600;
+    letter-spacing: 0.15em;
+    color: #c8bfa8;
+  }
+
+  .code-box .validity {
+    font-size: 13px;
+    color: #4a4840;
+  }
+
+  .note {
+    font-size: 13px !important;
+    color: #4a4840 !important;
+    margin-top: 8px !important;
+  }
+
+  @media (max-width: 480px) {
+    .server-grid { grid-template-columns: 1fr; }
+    header h1 { font-size: 1.5rem; }
+    .step-body { padding-left: 0; }
+    .step-header { align-items: flex-start; }
+  }
+</style>
+</head>
+<body>
+<div class="page">
+
+  <header>
+    <p class="eyebrow">Welcome to Eorzea</p>
+    <h1>Getting Started in FFXIV</h1>
+    <p>A quick-start guide to join us in game</p>
+  </header>
+
+  <!-- Step 1 -->
+  <div class="step">
+    <div class="step-header">
+      <div class="step-number">1</div>
+      <div class="step-title">Sign up for the free trial</div>
+    </div>
+    <div class="step-body">
+      <p>Create a Square Enix account and register for the free trial. When asked for your platform, choose <strong>Mac</strong>.</p>
+      <div class="link-row">
+        <a href="https://secure.square-enix.com/account/app/svc/ffxivregister?lng=en-us">square-enix.com → Free Trial Registration ↗</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Step 2 -->
+  <div class="step">
+    <div class="step-header">
+      <div class="step-number">2</div>
+      <div class="step-title">Download and install</div>
+    </div>
+    <div class="step-body">
+      <div class="link-row">
+        <a href="https://na.finalfantasyxiv.com/mac/download/">Final Fantasy XIV Mac Download ↗</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Step 3 -->
+  <div class="step">
+    <div class="step-header">
+      <div class="step-number">3</div>
+      <div class="step-title">Create a character on our server</div>
+    </div>
+    <div class="step-body">
+      <p>We are on <strong>Midgardsormr</strong> (Aether Data Center).
+  </div>
+
+  <!-- Spacer -->
+  <div class="step">
+    <div class="step-header">
+      
+    </div>
+    <div class="step-body">
+      <p></p>
+      <p></p>
+    </div>
+  </div>
+
+  <!-- Step 4 -->
+  <div class="step">
+    <div class="step-header">
+      <div class="step-number">4</div>
+      <div class="step-title">Play the free trial</div>
+    </div>
+    <div class="step-body">
+      <p>The free trial has no time limit — play until you're ready to subscribe.</p>
+    </div>
+  </div>
+
+  <!-- Step 5 -->
+  <div class="step">
+    <div class="step-header">
+      <div class="step-number">5</div>
+      <div class="step-title">Buy the full game</div>
+    </div>
+    <div class="step-body">
+      <p>Purchase the Starter Edition to receive a license code, then log into Mogstation and go to <em>Transfer to Full Game → Registration Code Entry</em> to activate it.</p>
+      <div class="link-row">
+        <a href="https://na.store.square-enix-games.com/final-fantasy-xiv-online-starter-edition---digital">Square Enix Store → Starter Edition ↗</a>
+        <a href="https://www.mogstation.com/">mogstation.com → Activate license ↗</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Step 6 -->
+  <div class="step">
+    <div class="step-header">
+      <div class="step-number">6</div>
+      <div class="step-title">Enter the Recruit a Friend code</div>
+    </div>
+    <div class="step-body">
+      <p>Enter this after activating the full game. It unlocks bonus items for you!</p>
+      <div class="code-box">
+        <span class="code">F7CNMWCU</span>
+        <span class="validity">valid until 11/3/26</span>
+      </div>
+      <div class="link-row">
+        <a href="https://support.na.square-enix.com/faqarticle.php?id=5382&la=1&kid=70973">SE guide: how to enter Recruit a Friend code ↗</a>
+      </div>
+      <p class="note">If the code has expired by the time you get here, just let us know!</p>
+    </div>
+  </div>
+
+</div>
+</body>
+</html>
